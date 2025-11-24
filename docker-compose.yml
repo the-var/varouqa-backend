@@ -1,0 +1,11 @@
+﻿version: "3.9"
+
+services:
+  dotnet-api-thevar:
+    build: .
+    container_name: dotnet-api-thevar
+    restart: always
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+    ports:
+      - "5000:8080"
